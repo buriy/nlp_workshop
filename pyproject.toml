@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "nlpworkshop"
+version = "0.1.0"
+description = ""
+authors = ["Yuri Baburov <burchik@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.6"
+razdel = "^0.4.0"
+pymorphy2 = "^0.8.0"
+matplotlib = "^3.1"
+jupyter = "^1.0"
+notebook = "^6.0"
+torch = "^1.2"
+torchtext = "^0.4.0"
+nerus = "^1.4"
+pymystem3 = "^0.2.0"
+sklearn = "^0.0.0"
+corus = "^0.4.0"
+pandas = "^0.25.1"
+tqdm = "^4.36"
+sentencepiece = "^0.1.83"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
