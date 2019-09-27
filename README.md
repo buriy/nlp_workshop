@@ -1,2 +1,2 @@
 # nlp_workshop
-nlp workshop on datafest siberia 2019
+nlp workshop at datafest siberia 2019
