@@ -13112,6 +13112,43 @@ div#notebook {
 <div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">We will use lenta dataset from https://github.com/natasha/corus</span>
+<span class="sd">&quot;&quot;&quot;</span>
+<span class="c1">#!mkdir -p data</span>
+<span class="c1">#!wget https://github.com/yutkin/Lenta.Ru-News-Dataset/releases/download/v1.0/lenta-ru-news.csv.gz -O data/lenta-ru-news.csv.gz</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[2]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>&#39;\nWe will use lenta dataset from https://github.com/natasha/corus\n&#39;</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">corus</span> <span class="k">import</span> <span class="n">load_lenta</span>
 <span class="n">path</span> <span class="o">=</span> <span class="s1">&#39;data/lenta-ru-news.csv.gz&#39;</span>
 <span class="n">records</span> <span class="o">=</span> <span class="n">load_lenta</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
@@ -13128,7 +13165,7 @@ div#notebook {
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[2]:</div>
+    <div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -13151,7 +13188,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#preprocessing: lower-case, commas, lemmatization</span>
@@ -13165,7 +13202,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">razdel</span>
@@ -13230,7 +13267,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">tokenize_re</span><span class="p">(</span><span class="s1">&#39;Названы регионы России с</span><span class="se">\xa0</span><span class="s1">самой высокой смертностью, от</span><span class="se">\xa0</span><span class="s1">рака... Привет всем!!!&#39;</span><span class="p">))</span>
@@ -13267,7 +13304,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span>
@@ -13307,13 +13344,13 @@ div#notebook {
 
  
  
-<div id="ef793591-aacc-4c36-a77b-70f214fe9c58"></div>
+<div id="3e016e5a-a1fc-4958-af05-0f669aa95f7a"></div>
 <div class="output_subarea output_widget_view ">
 <script type="text/javascript">
-var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
+var element = $('#3e016e5a-a1fc-4958-af05-0f669aa95f7a');
 </script>
 <script type="application/vnd.jupyter.widget-view+json">
-{"model_id": "049359a2502641488c42fb10971dbdc1", "version_major": 2, "version_minor": 0}
+{"model_id": "096b3be2b20c4dd9a521d2245d71a13f", "version_major": 2, "version_minor": 0}
 </script>
 </div>
 
@@ -13332,7 +13369,7 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[6]:</div>
+    <div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -13398,7 +13435,7 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">classes</span> <span class="o">=</span> <span class="nb">sorted</span><span class="p">(</span><span class="nb">set</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">]))</span>
@@ -13438,7 +13475,7 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Calculator: https://select-statistics.co.uk/calculators/sample-size-calculator-two-proportions/</span>
@@ -13518,18 +13555,19 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">#train, dev, test</span>
 <span class="c1">#20000, 2500, 2500 </span>
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="k">import</span> <span class="n">train_test_split</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_dev</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_dev</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">([</span><span class="n">_</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">],</span> 
-                                                  <span class="p">[</span><span class="n">_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">1500</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
-<span class="n">display</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">X_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_train&#39;</span><span class="p">]),</span> 
-        <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y_train&#39;</span><span class="p">]))</span>
+                                                  <span class="p">[</span><span class="n">_</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="n">dataset</span><span class="p">],</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">2500</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
 <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> 
-                                                    <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">1500</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+                                                    <span class="n">y_train</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mi">2500</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_train</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_dev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_dev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[:</span><span class="mi">5</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_train&#39;</span><span class="p">,</span> <span class="s1">&#39;y_train&#39;</span><span class="p">]))</span>
+<span class="n">display</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="n">X_dev</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">y_dev</span><span class="p">[:</span><span class="mi">5</span><span class="p">]),</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_dev&#39;</span><span class="p">,</span> <span class="s1">&#39;y_dev&#39;</span><span class="p">]))</span>
 </pre></div>
 
     </div>
@@ -13539,6 +13577,17 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 <div class="output_wrapper">
 <div class="output">
 
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>20000 20000 2500 2500 2500 2500
+</pre>
+</div>
+</div>
 
 <div class="output_area">
 
@@ -13566,84 +13615,34 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
     <tr style="text-align: right;">
       <th></th>
       <th>x_train</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>[в, сша, раскрывать, условие, сделка, с, дерипаска]</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>[социолог, зафиксировать, снижение, протестный, потенциал, в, россия]</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>[кейт, миддлтон, приходить, на, скачка, в, дешевый, платье]</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>[на, «, звезда, », состояться, церемония, резка, металл, для, танкер, «, афрамакс, »]</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>[на, место, столкновение, военный, самолет, сша, находить, выживать]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
       <th>y_train</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>0</td>
-      <td>Экономика</td>
+      <td>[в, россия, закрывать, чемпионат, мир, по, футбол]</td>
+      <td>Спорт</td>
     </tr>
     <tr>
       <td>1</td>
-      <td>Россия</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>Ценности</td>
-    </tr>
-    <tr>
-      <td>3</td>
+      <td>[назначать, орешкин, неизвестный, таджик, обретать, миссия]</td>
       <td>Экономика</td>
     </tr>
     <tr>
+      <td>2</td>
+      <td>[в, киев, массово, лопнуть, труба, после, подача, горячий, вода]</td>
+      <td>Бывший СССР</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>[россиянин, избегать, тюрьма, за, убийство, оскорблять, он, девушка]</td>
+      <td>Россия</td>
+    </tr>
+    <tr>
       <td>4</td>
-      <td>Мир</td>
+      <td>[умирать, режиссер, «, чегемский, детектив, », александр, светлов]</td>
+      <td>Культура</td>
     </tr>
   </tbody>
 </table>
@@ -13651,27 +13650,6 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([[</span><span class="n">x</span><span class="p">]</span> <span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">X_dev</span><span class="p">[:</span><span class="mi">5</span><span class="p">]],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;x_dev&#39;</span><span class="p">]),</span> 
-        <span class="n">pandas</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">y_dev</span><span class="p">[:</span><span class="mi">5</span><span class="p">],</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;y_dev&#39;</span><span class="p">]))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
@@ -13699,83 +13677,33 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
     <tr style="text-align: right;">
       <th></th>
       <th>x_dev</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>[телеведущая, отказывать, в, работа, из-за, «, недостаточно, большой, грудь, »]</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>[шарапов, отвечать, на, отказ, серена, уильямс, играть, против, она]</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>[bvlgari, представлять, новый, вариация, на, змеиный, тема]</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>[находить, новый, способ, побеждать, особо, опасный, рак]</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>[анестезиолог, изнасиловать, россиянка, под, наркоз, и, пойти, под, суд]</td>
-    </tr>
-  </tbody>
-</table>
-</div>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-<div class="output_html rendered_html output_subarea ">
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
       <th>y_dev</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <td>0</td>
+      <td>[телеведущая, отказывать, в, работа, из-за, «, недостаточно, большой, грудь, »]</td>
       <td>Интернет и СМИ</td>
     </tr>
     <tr>
       <td>1</td>
+      <td>[шарапов, отвечать, на, отказ, серена, уильямс, играть, против, она]</td>
       <td>Спорт</td>
     </tr>
     <tr>
       <td>2</td>
+      <td>[bvlgari, представлять, новый, вариация, на, змеиный, тема]</td>
       <td>Ценности</td>
     </tr>
     <tr>
       <td>3</td>
+      <td>[находить, новый, способ, побеждать, особо, опасный, рак]</td>
       <td>Наука и техника</td>
     </tr>
     <tr>
       <td>4</td>
+      <td>[анестезиолог, изнасиловать, россиянка, под, наркоз, и, пойти, под, суд]</td>
       <td>Силовые структуры</td>
     </tr>
   </tbody>
@@ -13792,104 +13720,6 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
 <div class="prompt input_prompt">In&nbsp;[11]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">X_train</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_train</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_dev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_dev</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">X_test</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">y_test</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>22000</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>22000</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>1500</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>1500</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>1500</pre>
-</div>
-
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-
-
-<div class="output_text output_subarea ">
-<pre>1500</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">TEST_ITEMS</span> <span class="o">=</span> <span class="p">{</span>
@@ -13960,7 +13790,7 @@ var element = $('#ef793591-aacc-4c36-a77b-70f214fe9c58');
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">tokenized</span> <span class="o">=</span> <span class="n">tokenize_re</span><span class="p">(</span><span class="s1">&#39;Выплаты на второго ребёнка&#39;</span><span class="p">)</span>
@@ -14007,7 +13837,7 @@ Dense:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">TEST_QUERY</span> <span class="o">=</span> <span class="s1">&#39;ха-ха, первое предложение для примера!&#39;</span>
@@ -14058,7 +13888,7 @@ Dense:
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec_x</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">tokenizer</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lowercase</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_df</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
@@ -14082,17 +13912,16 @@ Dense:
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>[(0, &#39;!&#39;),
- (1, &#39;более 370&#39;),
- (2, &#39;горбатая гора&#39;),
- (3, &#39;захотеть называть&#39;),
- (4, &#39;купить десять&#39;),
- (5, &#39;наш эра&#39;),
- (6, &#39;пастор и&#39;),
- (7, &#39;пресс-конференция в&#39;),
- (8, &#39;рыбаков&#39;),
- (9, &#39;сша не&#39;),
- (10, &#39;четыре машина&#39;)]
-Vocabulary size: 102647
+ (1, &#39;британский разведка&#39;),
+ (2, &#39;дворцовый переворот&#39;),
+ (3, &#39;игра с&#39;),
+ (4, &#39;между мат&#39;),
+ (5, &#39;обнаженный азия&#39;),
+ (6, &#39;позволять&#39;),
+ (7, &#39;разрушать стадион&#39;),
+ (8, &#39;соглашаться&#39;),
+ (9, &#39;факт »&#39;)]
+Vocabulary size: 95391
 </pre>
 </div>
 </div>
@@ -14103,7 +13932,7 @@ Vocabulary size: 102647
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec_x</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">(</span><span class="n">ngram_range</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">tokenizer</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">,</span> <span class="n">lowercase</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">min_df</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
@@ -14126,8 +13955,8 @@ Vocabulary size: 102647
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[(0, &#39;!&#39;), (1, &#39;кривая&#39;), (2, &#39;россиянин рассказывать&#39;)]
-Vocabulary size: 25667
+<pre>[(0, &#39;!&#39;), (1, &#39;машина и&#39;), (2, &#39;совместно&#39;)]
+Vocabulary size: 23708
 </pre>
 </div>
 </div>
@@ -14138,7 +13967,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 20000 x 17000</span>
@@ -14151,7 +13980,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">vec_y</span> <span class="o">=</span> <span class="p">{</span><span class="n">c</span><span class="p">:</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">classes</span><span class="p">)}</span>
@@ -14168,7 +13997,7 @@ Vocabulary size: 25667
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[18]:</div>
+    <div class="prompt output_prompt">Out[17]:</div>
 
 
 
@@ -14201,7 +14030,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">train_x_vec</span> <span class="o">=</span> <span class="n">vec_x</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_train</span><span class="p">)</span>
@@ -14215,7 +14044,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.svm</span> <span class="k">import</span> <span class="n">LinearSVC</span>
@@ -14233,7 +14062,7 @@ Vocabulary size: 25667
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[20]:</div>
+    <div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -14253,7 +14082,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predict_dev</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">dev_x_vec</span><span class="p">)</span>
@@ -14270,7 +14099,7 @@ Vocabulary size: 25667
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[21]:</div>
+    <div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -14336,38 +14165,38 @@ Vocabulary size: 25667
       <td>...</td>
     </tr>
     <tr>
-      <td>1495</td>
-      <td>Мир</td>
-      <td>Мир</td>
-      <td>[подозреваемый, в, рассылка, бомба, по, сша, отказываться, признавать, вина]</td>
+      <td>2495</td>
+      <td>Спорт</td>
+      <td>Спорт</td>
+      <td>[смалывать, поведывать, о, смерть, на, футбольный, поле]</td>
     </tr>
     <tr>
-      <td>1496</td>
+      <td>2496</td>
       <td>Мир</td>
-      <td>Мир</td>
-      <td>[в, британия, открывать, первый, убежище, для, несовершеннолетний, жертва, насильник]</td>
+      <td>Интернет и СМИ</td>
+      <td>[plus-size-блогер, рассказывать, о, нелепый, комплимент, мужчина]</td>
     </tr>
     <tr>
-      <td>1497</td>
+      <td>2497</td>
+      <td>Интернет и СМИ</td>
+      <td>Экономика</td>
+      <td>[оператор, находить, способ, частично, окупать, «, закон, яровой, »]</td>
+    </tr>
+    <tr>
+      <td>2498</td>
       <td>Россия</td>
       <td>Россия</td>
-      <td>[челябинск, утопать, в, мусор]</td>
+      <td>[россиянка, давать, отпор, избивать, она, козленок, полицейский, и, быть, наказывать]</td>
     </tr>
     <tr>
-      <td>1498</td>
-      <td>Наука и техника</td>
-      <td>Наука и техника</td>
-      <td>[предсказывать, климатический, катастрофа, в, россия]</td>
-    </tr>
-    <tr>
-      <td>1499</td>
-      <td>Из жизни</td>
-      <td>Из жизни</td>
-      <td>[десяток, кошелек, с, документ, и, кредитка, засорять, труба]</td>
+      <td>2499</td>
+      <td>Бывший СССР</td>
+      <td>Бывший СССР</td>
+      <td>[в, киев, находить, способ, заставлять, россия, пойти, на, уступка]</td>
     </tr>
   </tbody>
 </table>
-<p>1500 rows × 3 columns</p>
+<p>2500 rows × 3 columns</p>
 </div>
 </div>
 
@@ -14379,7 +14208,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">clf</span><span class="o">.</span><span class="n">score</span><span class="p">(</span><span class="n">dev_x_vec</span><span class="p">,</span> <span class="n">y_dev</span><span class="p">)</span>
@@ -14395,13 +14224,13 @@ Vocabulary size: 25667
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[22]:</div>
+    <div class="prompt output_prompt">Out[21]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.728</pre>
+<pre>0.7248</pre>
 </div>
 
 </div>
@@ -14412,7 +14241,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.metrics</span> <span class="k">import</span> <span class="n">classification_report</span><span class="p">,</span> <span class="n">confusion_matrix</span><span class="p">,</span> <span class="n">accuracy_score</span>
@@ -14425,7 +14254,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">predict_dev</span><span class="p">,</span> <span class="n">y_dev</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">3</span><span class="p">))</span>
@@ -14447,25 +14276,38 @@ Vocabulary size: 25667
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                   precision    recall  f1-score   support
 
-   69-я параллель      0.615     1.000     0.762         8
-      Бывший СССР      0.820     0.788     0.804       104
-              Дом      0.776     0.776     0.776        49
-         Из жизни      0.683     0.646     0.664       127
-   Интернет и СМИ      0.578     0.650     0.612       103
-         Культура      0.732     0.717     0.724        99
-              Мир      0.724     0.739     0.732       188
-  Наука и техника      0.828     0.752     0.788       109
-      Путешествия      0.583     0.667     0.622        42
-           Россия      0.690     0.613     0.649       225
-Силовые структуры      0.633     0.610     0.621        82
-            Спорт      0.887     0.893     0.890       150
-         Ценности      0.746     0.746     0.746        63
-        Экономика      0.728     0.834     0.778       151
+   69-я параллель      0.545     0.923     0.686        13
+      Бывший СССР      0.789     0.759     0.774       158
+              Дом      0.768     0.768     0.768        82
+         Из жизни      0.654     0.651     0.652       186
+   Интернет и СМИ      0.595     0.685     0.637       165
+             Крым      0.000     0.000     0.000         0
+         Культура      0.744     0.726     0.735       164
+              Мир      0.726     0.689     0.707       347
+  Наука и техника      0.798     0.753     0.775       178
+      Путешествия      0.662     0.707     0.684        75
+           Россия      0.695     0.644     0.668       385
+Силовые структуры      0.625     0.616     0.620       138
+            Спорт      0.920     0.906     0.913       266
+         Ценности      0.713     0.750     0.731        96
+        Экономика      0.698     0.777     0.736       247
 
-         accuracy                          0.728      1500
-        macro avg      0.716     0.745     0.726      1500
-     weighted avg      0.730     0.728     0.728      1500
+         accuracy                          0.725      2500
+        macro avg      0.662     0.690     0.672      2500
+     weighted avg      0.728     0.725     0.725      2500
 
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stderr output_text">
+<pre>/Projects/ai/nlp_workshop/.venv/lib/python3.6/site-packages/sklearn/metrics/classification.py:1439: UndefinedMetricWarning: Recall and F-score are ill-defined and being set to 0.0 in labels with no true samples.
+  &#39;recall&#39;, &#39;true&#39;, average, warn_for)
 </pre>
 </div>
 </div>
@@ -14476,7 +14318,7 @@ Vocabulary size: 25667
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">confusion_matrix</span><span class="p">(</span><span class="n">predict_dev</span><span class="p">,</span> <span class="n">y_dev</span><span class="p">))</span>
@@ -14496,22 +14338,59 @@ Vocabulary size: 25667
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>[[  8   0   0   0   0   0   0   0   0   0   0   0   0   0]
- [  0  82   0   0   4   2   2   1   0   2   1   1   1   8]
- [  0   1  38   2   1   0   1   0   0   4   0   0   0   2]
- [  0   1   2  82   6   3  12   1   2   7   2   3   3   3]
- [  0   0   0   8  67   3   5   0   3   5   1   1   2   8]
- [  3   0   0   0   8  71   3   2   1   3   2   2   3   1]
- [  0   5   0   7   6   2 139   5   3  12   3   1   0   5]
- [  0   2   0   2   2   4   3  82   4   4   0   1   3   2]
- [  0   1   2   3   2   1   3   1  28   1   0   0   0   0]
- [  1   3   6   6   9   6  13   3   3 138  17   5   1  14]
- [  0   3   1   3   2   1   4   0   1  14  50   1   0   2]
- [  0   0   0   0   4   1   1   0   2   3   2 134   2   1]
- [  0   0   0   5   1   3   3   0   1   1   1   0  47   1]
- [  1   2   0   2   4   0   3   4   0   6   0   2   1 126]]
+<pre>[[ 12   0   0   1   0   0   0   0   0   0   0   0   0   0   0]
+ [  0 120   0   0   4   0   4   2   3   1   6   2   1   1  14]
+ [  0   1  63   2   1   0   0   2   0   0   5   4   0   0   4]
+ [  2   1   2 121   8   0   3  21   2   3   9   4   3   5   2]
+ [  1   0   0  10 113   0   5   7   1   5   8   1   4   3   7]
+ [  0   0   0   0   0   0   0   0   0   0   0   0   0   0   0]
+ [  3   1   1   5  10   0 119   6   0   2   6   4   2   4   1]
+ [  0   8   0  13  13   0   6 239  12   4  24   4   3   4  17]
+ [  0   4   0   4   6   1   5   6 134   3   3   1   1   5   5]
+ [  0   2   2   3   3   0   1   4   2  53   3   0   0   0   2]
+ [  2   7   9   7  13   0  10  23   7   5 248  24   4   2  24]
+ [  0   4   2   5   3   0   3   5   0   1  27  85   1   0   2]
+ [  0   0   0   1   5   0   2   3   1   1   2   4 241   3   3]
+ [  0   0   0   9   4   0   2   4   0   1   0   1   1  72   2]
+ [  2   4   3   4   7   0   0   7   6   1  16   2   1   2 192]]
 </pre>
 </div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;__label__&#39;</span><span class="o">+</span><span class="n">y</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="p">,</span><span class="s1">&#39;_&#39;</span><span class="p">)]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)]</span>
+<span class="n">lines</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
+<span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
+<span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data/train.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[25]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1466148</pre>
+</div>
+
 </div>
 
 </div>
@@ -14523,10 +14402,8 @@ Vocabulary size: 25667
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;__label__&#39;</span><span class="o">+</span><span class="n">y</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)]</span>
-<span class="n">lines</span><span class="p">[:</span><span class="mi">5</span><span class="p">]</span>
-<span class="kn">from</span> <span class="nn">pathlib</span> <span class="k">import</span> <span class="n">Path</span>
-<span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data/train.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;__label__&#39;</span><span class="o">+</span><span class="n">y</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X_dev</span><span class="p">,</span> <span class="n">y_dev</span><span class="p">)]</span>
+<span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data/dev.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
 </pre></div>
 
     </div>
@@ -14545,7 +14422,7 @@ Vocabulary size: 25667
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>1613605</pre>
+<pre>183526</pre>
 </div>
 
 </div>
@@ -14559,41 +14436,7 @@ Vocabulary size: 25667
 <div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">lines</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="s1">&#39;__label__&#39;</span><span class="o">+</span><span class="n">y</span><span class="p">]</span> <span class="o">+</span> <span class="n">x</span><span class="p">)</span> <span class="k">for</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">X_dev</span><span class="p">,</span> <span class="n">y_dev</span><span class="p">)]</span>
-<span class="n">Path</span><span class="p">(</span><span class="s1">&#39;data/dev.txt&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">write_text</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">))</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[27]:</div>
-
-
-
-
-<div class="output_text output_subarea output_execute_result">
-<pre>110001</pre>
-</div>
-
-</div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>dist/fastText-0.9.1/fasttext supervised -input data/train.txt -output data/ft.bin
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>dist/fastText-0.9.1/fasttext supervised -input data/train.txt -output data/ft.bin -minCount <span class="m">2</span> -epoch <span class="m">10</span> -wordNgrams <span class="m">1</span>
 </pre></div>
 
     </div>
@@ -14611,9 +14454,9 @@ Vocabulary size: 25667
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Read 0M words
-Number of words:  15773
+Number of words:  8505
 Number of labels: 17
-Progress: 100.0% words/sec/thread:  464224 lr:  0.000000 loss:  0.653847 ETA:   0h 0m
+Progress: 100.0% words/sec/thread:  801783 lr:  0.000000 loss:  0.927016 ETA:   0h 0m
 </pre>
 </div>
 </div>
@@ -14624,7 +14467,7 @@ Progress: 100.0% words/sec/thread:  464224 lr:  0.000000 loss:  0.653847 ETA:   
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">!</span>dist/fastText-0.9.1/fasttext <span class="nb">test</span> data/ft.bin.bin data/dev.txt
@@ -14644,9 +14487,9 @@ Progress: 100.0% words/sec/thread:  464224 lr:  0.000000 loss:  0.653847 ETA:   
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>N	1500
-P@1	0.885
-R@1	0.885
+<pre>N	1647
+P@1	0.738
+R@1	0.738
 </pre>
 </div>
 </div>
@@ -14657,23 +14500,11 @@ R@1	0.885
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">fasttext</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">model</span> <span class="o">=</span> <span class="n">fasttext</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;data/ft.bin.bin&#39;</span><span class="p">)</span>
+<span class="n">model</span> <span class="o">=</span> <span class="n">fasttext</span><span class="o">.</span><span class="n">load_model</span><span class="p">(</span><span class="s1">&#39;data/ft.bin.bin&#39;</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14701,10 +14532,61 @@ R@1	0.885
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">X_dev</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">k</span><span class="o">=</span><span class="mi">15</span><span class="p">))))</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_dev</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_dev</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[30]:</div>
+
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>([&#39;телеведущая&#39;,
+  &#39;отказывать&#39;,
+  &#39;в&#39;,
+  &#39;работа&#39;,
+  &#39;из-за&#39;,
+  &#39;«&#39;,
+  &#39;недостаточно&#39;,
+  &#39;большой&#39;,
+  &#39;грудь&#39;,
+  &#39;»&#39;],
+ &#39;Интернет и СМИ&#39;)</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="nb">zip</span><span class="p">(</span><span class="o">*</span><span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">X_dev</span><span class="p">[</span><span class="mi">0</span><span class="p">]),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">))))</span>
+<span class="n">predicted</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">tq</span><span class="p">(</span><span class="n">X_dev</span><span class="p">):</span>
+    <span class="n">predicts</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">k</span><span class="o">=</span><span class="mi">1</span><span class="p">)[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+    <span class="c1">#print(predicts)</span>
+    <span class="n">predicted</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">vec_y</span><span class="p">[</span><span class="n">predicts</span><span class="p">[</span><span class="mi">9</span><span class="p">:]</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s1">&#39;_&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">)])</span>
+    <span class="n">expected</span> <span class="o">=</span> <span class="p">[</span><span class="n">vec_y</span><span class="p">[</span><span class="n">y</span><span class="p">]</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_dev</span><span class="p">]</span>
+<span class="n">display</span><span class="p">(</span><span class="n">predicted</span><span class="p">[:</span><span class="mi">10</span><span class="p">],</span> <span class="n">expected</span><span class="p">[:</span><span class="mi">10</span><span class="p">])</span>
+<span class="n">accuracy_score</span><span class="p">(</span><span class="n">predicted</span><span class="p">,</span> <span class="n">expected</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -14723,62 +14605,79 @@ R@1	0.885
 
 
 <div class="output_text output_subarea ">
-<pre>[(&#39;__label__Мир&#39;, 0.27923116087913513),
- (&#39;__label__Россия&#39;, 0.22131836414337158),
- (&#39;__label__Культура&#39;, 0.13585232198238373),
- (&#39;__label__Экономика&#39;, 0.10171813517808914),
- (&#39;__label__Ценности&#39;, 0.07553454488515854),
- (&#39;__label__Спорт&#39;, 0.07508181780576706),
- (&#39;__label__Путешествия&#39;, 0.07172296941280365),
- (&#39;__label__Дом&#39;, 0.025324229151010513),
- (&#39;__label__Из&#39;, 0.002445319900289178),
- (&#39;__label__69-я&#39;, 0.0021711180452257395),
- (&#39;__label__Бывший&#39;, 0.00209012720733881),
- (&#39;__label__Бизнес&#39;, 0.0016663828864693642),
- (&#39;__label__Крым&#39;, 0.0016486550448462367),
- (&#39;__label__Культпросвет&#39;, 0.0016293117078021169),
- (&#39;__label__Силовые&#39;, 0.0015887556364759803)]</pre>
+<pre>[(&#39;__label__Интернет_и_СМИ&#39;, 0.8731516599655151)]</pre>
 </div>
 
 </div>
-
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">y_train</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
 
 <div class="output_area">
 
-    <div class="prompt output_prompt">Out[33]:</div>
+    <div class="prompt"></div>
+
+
+
+
+
+ 
+ 
+<div id="95642cea-3af1-4103-831f-a196daa9b641"></div>
+<div class="output_subarea output_widget_view ">
+<script type="text/javascript">
+var element = $('#95642cea-3af1-4103-831f-a196daa9b641');
+</script>
+<script type="application/vnd.jupyter.widget-view+json">
+{"model_id": "16da06a1c4604e09a223e1800fc223f7", "version_major": 2, "version_minor": 0}
+</script>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>
+</pre>
+</div>
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>[5, 14, 15, 10, 13, 13, 10, 12, 2, 4]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt"></div>
+
+
+
+
+<div class="output_text output_subarea ">
+<pre>[5, 14, 15, 10, 13, 12, 10, 9, 16, 4]</pre>
+</div>
+
+</div>
+
+<div class="output_area">
+
+    <div class="prompt output_prompt">Out[31]:</div>
 
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>([&#39;сотрудник&#39;,
-  &#39;кировский&#39;,
-  &#39;столовая&#39;,
-  &#39;попадаться&#39;,
-  &#39;на&#39;,
-  &#39;кража&#39;,
-  &#39;тонна&#39;,
-  &#39;мясо&#39;],
- &#39;Из жизни&#39;)</pre>
+<pre>0.726</pre>
 </div>
 
 </div>
@@ -14789,7 +14688,7 @@ R@1	0.885
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[32]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># NN</span>
