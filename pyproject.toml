@@ -20,6 +20,7 @@ corus = "^0.4.0"
 pandas = "^0.25.1"
 tqdm = "^4.36"
 sentencepiece = "^0.1.83"
+fasttext = "^0.9.1"
 
 [tool.poetry.dev-dependencies]
 

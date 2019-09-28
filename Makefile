@@ -12,3 +12,17 @@ setup:
 	poetry >/dev/null 2>&1 || python3 -m pip install --user poetry
 	poetry install
 	.venv/bin/jupyter nbextension enable --py widgetsnbextension
+
+# See https://github.com/sdispater/poetry/issues/100
+define get_requirements
+import tomlkit
+with open('poetry.lock') as t:
+    lock = tomlkit.parse(t.read())
+    for p in lock['package']:
+        if not p['category'] == 'dev':
+            print(f"{p['name']}=={p['version']}")
+endef
+export get_requirements
+
+requirements.txt: poetry.lock
+	.venv/bin/python -c "$$get_requirements" | grep -v pywin > $@
