@@ -45,7 +45,7 @@ prometheus-client==0.7.1
 prompt-toolkit==2.0.9
 ptyprocess==0.6.0
 pybind11==2.4.2
-pygments==2.4.2
+pygments==2.7.4
 pymorphy2==0.8
 pymorphy2-dicts==2.4.393442.3710985
 pymystem3==0.2.0
